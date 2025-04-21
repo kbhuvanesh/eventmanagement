@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "251c3a34-1b54-4454-8c71-665c66eea382",
+		"name": "Event Managment Systems",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "2757016"
+	},
+	"item": [
+		{
+			"name": "User Login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "bhuvan123",
+						"username": "k.bhuvanesh@gmail.com"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user-login?email=k.bhuvanesh@gmail.com&password=bhuvan123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user-login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "k.bhuvanesh@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "bhuvan123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/kbhuv/OneDrive/Desktop/premium_photo-1668130718429-7abf7b186f2f.jpg"
+						},
+						{
+							"key": "type",
+							"value": "Feature",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "postman testing",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "sdfsdfsdf",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2025-04-28",
+							"type": "text"
+						},
+						{
+							"key": "time",
+							"value": "20:00",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "bangalore",
+							"type": "text"
+						},
+						{
+							"key": "categorie_id",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8080/create-event"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/kbhuv/OneDrive/Desktop/premium_photo-1668130718429-7abf7b186f2f.jpg"
+						},
+						{
+							"key": "type",
+							"value": "Feature",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "postman testing1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "sdfsdfsdf",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2025-04-28",
+							"type": "text"
+						},
+						{
+							"key": "time",
+							"value": "20:01",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "bangalore",
+							"type": "text"
+						},
+						{
+							"key": "categorie_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8080/update-event"
+			},
+			"response": []
+		},
+		{
+			"name": "List Event",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/list-event"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Event",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/delete-event?id=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delete-event"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Category",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/list-category"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Category",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/create-category?name=testing-category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"create-category"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "testing-category"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attendees List",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/attendees-list"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Category",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/update-category?id=5&name=postman-category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update-category"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						},
+						{
+							"key": "name",
+							"value": "postman-category"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Category",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/delete-category?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delete-category"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
