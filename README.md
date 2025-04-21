@@ -19,12 +19,14 @@ Run the following commands
 php artisan migrate --path=database/migrations/2023_08_16_183439_create_registrations_table.php
 8. run below commands from inside project folder
 php artisan cache:clear && php artisan route:cache
-9. Register as User from home page
-10. once user register, login using username and password
-11. Create a category 
-12. Create an event
-13. attendees can register from homepage by clicking each event
-14. List of registered events can be viewed on Attendees page
+9. Open in browser this URL: http://localhost:8080/
+10. Register as User from home page
+11. once user register, login using username and password
+12. Create a category 
+13. Create an event
+14. attendees can register from homepage by clicking each event
+15. List of registered events can be viewed on Attendees page
+16. Post man collections are named "Event Managment Systems.postman_collection.json"
 
 
 Pending items to finish
