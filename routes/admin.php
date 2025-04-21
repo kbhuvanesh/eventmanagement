@@ -10,15 +10,13 @@ use App\Http\Controllers\DashboardController;
 // Web API Routes
 Route::post('/user-registration',[UserController::class,'UserRegistration']);
 Route::post('/user-login',[UserController::class,'UserLogin']);
-Route::post('/send-otp',[UserController::class,'SendOTPCode']);
-Route::post('/verify-otp',[UserController::class,'VerifyOTP']);
+
 // User Logout
 Route::get('/logout',[UserController::class,'UserLogout']);
 // Page Routes
 Route::get('/userLogin',[UserController::class,'LoginPage'])->name('login');
 Route::get('/userRegistration',[UserController::class,'RegistrationPage']);
-Route::get('/sendOtp',[UserController::class,'SendOtpPage']);
-Route::get('/verifyOtp',[UserController::class,'VerifyOTPPage']);
+
 
 Route::group(['middleware' => 'auth'], function() {
 
@@ -48,5 +46,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post("/delete-event",[EventController::class,'EventDelete']);
     Route::post("/update-event",[EventController::class,'EventUpdate']);
     Route::post("/event-by-id",[EventController::class,'EventByID']);
+    Route::get("/attendees-list",[ReportController::class,'AttendeesList']);    
 
 });

@@ -71,4 +71,9 @@ class ReportController extends Controller
         return view('backend.pages.dashboard.report-page',compact('events','registrations','status'));
     }
 
+    function AttendeesList(Request $request){
+        $user_id=auth()->id();
+       $registrations=Registration::All()->where('user_id',$user_id);     
+       return $registrations = response()->json($registrations);  
+    }
 }
